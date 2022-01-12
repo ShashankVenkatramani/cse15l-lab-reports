@@ -1,3 +1,4 @@
-Revert
+# Lab Report Links
+[Lab Report 1](https://shashankvenkatramani.github.io/cse15l-lab-reports/lab-report-1-week-2.html)
 
-I am making this change via my computer, and I can see style changes **live**
+[Lab Report 1](lab-report-1-week-2.html)
