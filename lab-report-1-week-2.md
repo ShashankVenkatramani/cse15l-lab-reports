@@ -45,3 +45,27 @@ What this command does is takes the first argument, the file you want, and sends
 After hitting enter you will be prompted to enter your password, and when the `scp` is successful the terminal will print back the name of the file you transferred over, and it should look like this:
 
 ![SCP Example](scpExample.png)
+
+## Step Five: Setting an SSH Key
+
+Now typing your password in each time you ssh or scp gets tedious, and slows down your workflow. In order to speed this up, you can create whats called an SSH key, which gives you a public and private key pair that terminal can use to automatically authenticate you when SSH'ing from your computer.
+
+On your computer enter command:
+
+`ssh-keygen`
+
+And it should generate your public/private rsa key pair. From there ssh into ieng6 using the same commands from above, and use the `mkdir` command to create a .ssh folder. This is where you will end up storing your public key. Go ahead and logout from ieng6.
+
+From there use the scp command to move your id_rsa.pub key to your .ssh folder. The path for your id_rsa.pub should be visible in the output from running `ssh_keygen`. Run the following scp command:
+
+`scp yourIDRSA.pubKeyPath cs15lwi22xxx@ieng6.ucsd.edu:~/.ssh/authorized_keys`
+
+This moves your public key into the authorized keys folder. Note now scp says ~/.ssh/authorized_keys, so it will go into your default folder, then .ssh, then authorized_keys.
+
+You should now be able to SSH into ieng6 without your password as so:
+![SSH no password](sshNoPassword.png)
+
+## Step Six: Optimizing Remote Running
+
+Great! We can now do passwordless SSH. Even then though, transferring files, then compiling, then running is still a pretty tedious process. In order to streamline this we can use a single line of code as such:
+`ssh cs15lwi22xxx@ieng6.ucsd.edu ""`
