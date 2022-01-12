@@ -32,6 +32,7 @@ Note: your terminal should no longer list your personal computer and should have
 Try running the command: `pwd`
 
 And you should see an output like this:
+
 ![Running Command](runningCommand.png)
 
 ## Step Four: Moving Files with `scp`
@@ -63,9 +64,17 @@ From there use the scp command to move your id_rsa.pub key to your .ssh folder. 
 This moves your public key into the authorized keys folder. Note now scp says ~/.ssh/authorized_keys, so it will go into your default folder, then .ssh, then authorized_keys.
 
 You should now be able to SSH into ieng6 without your password as so:
+
 ![SSH no password](sshNoPassword.png)
 
 ## Step Six: Optimizing Remote Running
 
-Great! We can now do passwordless SSH. Even then though, transferring files, then compiling, then running is still a pretty tedious process. In order to streamline this we can use a single line of code as such:
-`ssh cs15lwi22xxx@ieng6.ucsd.edu ""`
+Great! We can now do passwordless SSH. However we still have to enter commands to compile and then run code which is still a pretty tedious process. In order to streamline running files we have sent over we can run the following line:
+
+`ssh cs15lwi22xxx@ieng6.ucsd.edu "javac fileName.java; java fileName"`
+
+This command will ssh into ieng6 under your account, and then from there run all the commands in the quotes seperated by the semicolon. It will start with compiling the file, and then running it. 
+
+#Conclusion
+
+Thanks for reading through the guide! I hope it all worked out :)
