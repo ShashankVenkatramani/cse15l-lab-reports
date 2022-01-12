@@ -73,7 +73,9 @@ Great! We can now do passwordless SSH. However we still have to enter commands t
 
 `ssh cs15lwi22xxx@ieng6.ucsd.edu "javac fileName.java; java fileName"`
 
-This command will ssh into ieng6 under your account, and then from there run all the commands in the quotes seperated by the semicolon. It will start with compiling the file, and then running it. 
+This command will ssh into ieng6 under your account, and then from there run all the commands in the quotes seperated by the semicolon. It will start with compiling the file, and then running it and should look like this:
+
+![faster SSH run](fasterSSHrun.png)
 
 #Conclusion
 
