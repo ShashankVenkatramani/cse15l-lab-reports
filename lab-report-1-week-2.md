@@ -18,7 +18,7 @@ Once your account password is set, you can now connect via SSH for the first tim
 
 note: the yourAccountName should look like `cs15lwi22xxx`
 
-After running the command you will be prompted to enter your password, which you should go ahead and do, and from there you will see a successful connection like this:
+After running the command you will be prompted to enter yes, and then to enter your password, which you should go ahead and do, and from there you will see a successful connection like this:
 
 ![Logged In](loggedInSuccessfully.png)
 
