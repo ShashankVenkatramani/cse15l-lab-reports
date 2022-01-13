@@ -75,7 +75,7 @@ Great! We can now do passwordless SSH. However we still have to enter commands t
 
 This command will ssh into ieng6 under your account, and then from there run all the commands in the quotes seperated by the semicolon. It will start with compiling the file, and then running it and should look like this:
 
-![faster SSH run](fasterSSHrun.png)
+![faster SSH run](fasterSSHRun.png)
 
 #Conclusion
 
