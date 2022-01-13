@@ -77,6 +77,6 @@ This command will ssh into ieng6 under your account, and then from there run all
 
 ![faster SSH run](fasterSSHRun.png)
 
-#Conclusion
+# Conclusion
 
 Thanks for reading through the guide! I hope it all worked out :)
