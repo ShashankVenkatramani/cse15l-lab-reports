@@ -7,7 +7,7 @@ Screenshot of code change:
 ![FirstCodeChange](lab-report-2-files/FirstCodeChange.png)
 
 Link to test file of failure input:
-[test-file4.md](https://shashankvenkatramani.github.io/cse15l-lab-reports/lab-report-2-files/test-file7.md)
+[test-file4.md](https://shashankvenkatramani.github.io/cse15l-lab-reports/lab-report-2-files/test-file4.md)
 
 Screenshot of code symptom:
 
