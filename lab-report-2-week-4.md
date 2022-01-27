@@ -10,6 +10,7 @@ Link to test file of failure input:
 [test-file4.md](https://shashankvenkatramani.github.io/cse15l-lab-reports/lab-report-2-files/test-file7.md)
 
 Screenshot of code symptom:
+
 ![FirstCodeSymptom](lab-report-2-files/FirstCodeSymptom.png)
 
 The bug was that we never did any validation on the link itself. We would take whatever was after a bracket and then look for the end of the line, or an end parenthesis, or anything to indicate the end of text, but we never checked if the text itself was a link. As a result of this there was the symptom that non links that were after a bracket would still be parsed and outputted. Looking at the test file it can be seen that there is an end bracket, with “link goes here!” after, which is not a link, but still got registered as one.
