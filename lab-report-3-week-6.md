@@ -3,11 +3,11 @@
 
 ![configFile](lab-report-3-files/configFile.png)
 
-Here I nano'd into the config file. As we can see the Host ieng6 line denotes the alias "ieng6" that has all of the relevant info. The HostName contains the address of the server which is ieng6.ucsd.edu, the User is my user's account, and finally the IdentityFile links the correct rsa private key to use to sign in via SSH without the need for a password. Now I can simply do commands with ieng6 alias, and all of the relevant information will be passed through.
+Here I nano'd into the config file. As we can see the Host ieng6 line denotes the alias `ieng6` that has all of the relevant info. The `HostName` contains the address of the server which is `ieng6.ucsd.edu`, the `User` is my user's account, and finally the `IdentityFile` links the correct rsa private key to use to sign in via SSH without the need for a password. Now I can simply do commands with ieng6 alias, and all of the relevant information will be passed through.
 
 ![configFile](lab-report-3-files/sshExample.png)
 
-In this example I do ssh ieng6 (without any other details such as the server address, user etc). As you can see it says `Hello cs15lwi22abv` which is the User that I chose in the config file. It successfully logged into ieng6 and I Am now able to run any commands that I like.
+In this example I do `ssh ieng6` (without any other details such as the server address, user etc). As you can see it says `Hello cs15lwi22abv` which is the User that I chose in the config file. It successfully logged into ieng6 and I Am now able to run any commands that I like.
 
 ![configFile](lab-report-3-files/scpExample.png)
 
