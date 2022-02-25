@@ -53,7 +53,7 @@ For snippet one, the specific output is `testOtherImpOne` with the line:
 expected:<[`google.com, google.com, ucsd.edu]> but was:<[url.com, `google.com, google.com]>
 ```
 
-This will be a much larger code change in order to fix my implementation for test one. I capture the proper links correctly, however the code captures a false positive of "url.com". In order to account for this I would need to add a whole check for markdown link validation, as the current code works by searching for periods and then expanding outwards until it hits stop characters, regardless of if its a broken markdown link or not.
+This will be a much larger code change in order to fix my implementation for test one. I capture the proper links correctly, however the code captures a false positive of "url.com". In order to account for this I would need to add a whole check for markdown link validation, as the current code works by searching for periods and then expanding outwards until it hits stop characters, regardless of if its a broken markdown link or not. The issue of backticks doesn't affect the link capturing itself, but I do need to remove the false positives.
 
 ## Test Two
 
@@ -105,7 +105,7 @@ For snippet one, the specific output is `testOtherImpTwo` with the line:
 expected:<[a.com, a.com, example.com]> but was:<[a.com)](b.com, a.com(()), example.com]>
 ```
 
-Similar to snippet one, in order to make my code work for snippet two it would involve a large code change. Since I scan for every link within the markdown without checking if its a valid markdown link, it captures the false positive of b.com. In order to fix this it would require validation of the surrounding syntax around a link, and would not be a <10 lines change.
+Similar to snippet one, in order to make my code work for snippet two it would involve a large code change. Since I scan for every link within the markdown without checking if its a valid markdown link, it captures the false positive of b.com. In order to fix this it would require validation of the surrounding syntax around a link, and would not be a <10 lines change. This is not a problem with nested parentheses, brackets, and escaped brackets on capturing links, but validating them, I need to check that they are structured in a way that would be accepted by markdown.
 
 ## Test Three
 
@@ -157,4 +157,4 @@ For snippet one, the specific output is `testOtherImpThree` with the line:
 <[https://ucsd-cse15l-w22.github.io/]> but was:<[]>
 ```
 
-There are multiple problems that are occurring here, some of which would be small fixes and others that are larger ones. On error is that links with two periods such as `https://www.twitter.com` gets double counted since each period is counted as part of a link and searched outwards from - the fix for this would be relatively easy as the period search index needs to be pushed back to the end of the link once its found. Another issue is that non links are counted, such as `that.` since there is a period, in order to account for this proper markdown validation needs to be added in order to only look for links there and not in sentences (would be a large fix). The final issue is the same issue from the other snippets, which is just markdown validation in general so it doesn't include broken markdown links.
+There are multiple problems that are occurring here, some of which would be small fixes and others that are larger ones. On error is that links with two periods such as `https://www.twitter.com` gets double counted since each period is counted as part of a link and searched outwards from - the fix for this would be relatively easy as the period search index needs to be pushed back to the end of the link once its found. Another issue is that non links are counted, such as `that.` since there is a period, in order to account for this proper markdown validation needs to be added in order to only look for links there and not in sentences (would be a large fix). The final issue is the same issue from the other snippets, which is just markdown validation in general so it doesn't include broken markdown links. I would need to add a way to track new lines as well as parentheses and brackets, in order to ensure that markdown would accept the link before it gets added to the return arraylist.
