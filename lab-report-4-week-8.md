@@ -1,7 +1,7 @@
 # Lab Report 4 Week 8
-My markdown repository: https://github.com/ShashankVenkatramani/markdown-parse/
+My markdown repository: [repo](https://github.com/ShashankVenkatramani/markdown-parse/)
 
-Other markdown repository: https://github.com/bimai25/markdown-parse-brandon/blob/main/MarkdownParse.java
+Other markdown repository: [repo](https://github.com/bimai25/markdown-parse-brandon/blob/main/MarkdownParse.java)
 
 ## Test One
 
